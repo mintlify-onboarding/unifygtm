@@ -1,11 +1,16 @@
 {
   "name": "Unify",
-  "logo": "/logo.svg",
+  "logo": {
+    "light": "/logo.svg",
+    "dark": "/logo.svg"
+  },
   "favicon": "/favicon.png",
   "colors": {
-    "primary": "#OEOEOE",
-    "light": "#FAFAFA",
-    "dark": "#OEOEOE"
+    "primary": "#272728",
+    "light": "#EBECED",
+    "background": {
+      "dark": "#0C0D0D"
+    }
   },
   "modeToggle": {
     "default": "dark",
@@ -36,7 +41,10 @@
   "navigation": [
     {
       "group": "Get Started",
-      "pages": ["getting-started/overview"]
+      "pages": [
+        "getting-started/overview", 
+        "getting-started/onboarding-guide"
+      ]
     }
   ],
   "footerSocials":

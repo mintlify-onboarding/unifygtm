@@ -1,0 +1,51 @@
+---
+title: "Email Deliverability"
+---
+
+## Configuration
+
+2 key components of email deliverability are 1) IP addresses and 2) sending domains. There are other settings that impact deliverability, but these are 2 of the main ones that we will discuss.
+
+## IP Addresses
+
+[Sendgrid](https://sendgrid.com/) is an email api provider that enables you to control your own IP address for outbound efforts. Most sales email tools (eg Outreach) integrate natively with Sendgrid. If you directly integrated your G-Suite account to your outbound email tool, you’re likely sending emails from a shared IP address owned by Google. This means that issues caused by a different company can impact your deliverability (we believe its better to control your own destiny and fully own your IP health).
+
+How to change your IP address:
+
+1. Get a dedicated IP address by signing up for the [Pro plan ($89.95/mo)](https://sendgrid.com/pricing/) of Sendgrid
+2. Ensure that Sendgrid is properly configured (see [Apollo’s guide](https://knowledge.apollo.io/hc/en-us/articles/4414449230093-Set-Up-Configure-and-Troubleshoot-Your-SendGrid-Account))
+3. Integrate Sendgrid to your mailing tool 
+    1. Authenticate your domain ([resource](https://docs.sendgrid.com/ui/account-and-settings/how-to-set-up-domain-authentication))
+    2. Resources from email products
+        1. Outreach support documentation ([link](https://www.outreach.io/platform/integrations/sendgrid)) is not public, but they should have documentation on how to integrate Outreach to Sendgrid
+        2. Apollo - [setup Apollo’s integration with Sendgrid](https://knowledge.apollo.io/hc/en-us/articles/4415867175693-Set-Up-Apollo-s-Integration-with-SendGrid)
+
+## Sending Domains
+
+Having multiple sending domains or sub-domains (eg [unifygtm.com](http://unifygtm.com) and [get.unifygtm.com](http://get.unifygtm.com)) can help you reduce the number of email sends per inbox. IP addresses and domains should be mapped 1:1 to each other so that any deliverability problem is isolated to one domain.
+
+# Warming
+
+Email and IP warming is an important practice for building strong email deliverability. If an inbox goes from zero activity to hundreds of sends per day, it signals to ESPs (gmail, outlook, etc) that you behaving like a spammer. Warming, or gradually ramping up send volume in a programmatic way, simulates healthy human behavior through your inbox. 
+
+## Warmup Inbox
+
+One service that you can use to warm mailboxes is Warmup Inbox - their starter plan is $15/mo which enables you to send 50 emails per day through their service. 
+
+Link your mailbox (via gmail, outlook or another provider)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/76f85a50-b2a5-4ad3-ae3b-15a9e1d46f5b/Untitled.png)
+
+ 
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5942e425-bf18-4bd0-bf68-14255890836b/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/01e6e31a-4a56-45a4-a9fa-7e3f0fa401b8/Untitled.png)
+
+In Sendgrid, create a dedicated API key for Warmup Inbox. Follow WUI’s instructions on how to properly configure security settings
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/754de652-7f5b-4008-91b2-2a03a41703b1/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4e45c822-c8d3-4675-82da-bb15a9ec5670/Untitled.png)
+
+You’ll also need to verify your sender identity in Sendgrid - [follow instructions here](https://docs.sendgrid.com/ui/sending-email/sender-verification). [See a relevant help article](https://help.warmupinbox.com/en/articles/4770420-configure-inbox-for-sendgrid) from Warmup Inbox.
