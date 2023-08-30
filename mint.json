@@ -1,0 +1,47 @@
+{
+  "name": "Unify",
+  "logo": "/logo.svg",
+  "favicon": "/favicon.png",
+  "colors": {
+    "primary": "#OEOEOE",
+    "light": "#FAFAFA",
+    "dark": "#OEOEOE"
+  },
+  "modeToggle": {
+    "default": "dark",
+    "isHidden": true
+  },
+  "topbarCtaButton": {
+    "name": "Log in",
+    "url": "https://app.unifygtm.com/"
+  },
+  "topbarLinks": [
+    {
+      "name": "Join the waitlist",
+      "url": "https://www.unifygtm.com/about#"
+    }
+  ],
+  "anchors": [
+    {
+      "name": "About Unify",
+      "icon": "circle-info",
+      "url": "https://www.unifygtm.com/about"
+    },
+    {
+        "name": "Privacy",
+        "icon": "lock",
+        "url": "https://www.unifygtm.com/legal/privacy-policy"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Get Started",
+      "pages": ["getting-started/overview"]
+    }
+  ],
+  "footerSocials":
+    {
+        "twitter": "https://twitter.com/unifygtm",
+        "linkedin": "https://www.linkedin.com/company/unifygtm/"
+    }
+}
