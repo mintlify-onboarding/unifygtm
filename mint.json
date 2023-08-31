@@ -26,15 +26,13 @@
       "url": "https://www.unifygtm.com/about#"
     }
   ],
-  "anchors": [
+  "tabs": [
     {
       "name": "About Unify",
-      "icon": "circle-info",
       "url": "https://www.unifygtm.com/about"
     },
     {
         "name": "Privacy",
-        "icon": "lock",
         "url": "https://www.unifygtm.com/legal/privacy-policy"
     }
   ],

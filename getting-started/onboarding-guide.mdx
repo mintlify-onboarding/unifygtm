@@ -1,21 +1,100 @@
 ---
-title: "Onboarding Checklist"
-description: "There are a few key steps for fully activating on Unify:"
+title: 'Onboarding Checklist'
+description: 'There are a few key steps for fully activating on Unify'
 ---
-
-1. Integrate your website
-2. Turn on website intent data
-3. Integrate your CRM
-4. Build your first audience
-5. Launch your first playbook
 
 ## Step 1: Integrate your website
 
 You have 3 options for integrating your website to Unify:
 
-1. Javascript Snippet: install the Unify JavaScript tag directly on your website. Navigate to [Settings > Integrations > Website Tag](https://app.unifygtm.com/dashboard/settings/integrations/website-tag) to get your tag
-2. Google Tag Manager: install the Unify JavaScript tag in Google Tag Manager. Navigate to [Settings > Integrations > Website Tag](https://app.unifygtm.com/dashboard/settings/integrations/website-tag) to get your tag, and make sure to enable [Support document.write](https://www.notion.so/Integrate-Unify-to-your-website-9d085875792e4ef5ba69e6ef81e7e553?pvs=21).
-3. Segment: follow [instructions here](/integrations/segment) to integrate your website via Segment
+<Card
+  title="Javascript Snippet"
+  href="https://app.unifygtm.com/dashboard/settings/integrations/website-tag"
+  icon="code"
+>
+  Install the Unify JavaScript tag directly on your website. Navigate to
+  Settings > Integrations > Website Tag to get your tag
+</Card>
+
+<Card
+  title="Google Tag Manager"
+  href="https://app.unifygtm.com/dashboard/settings/integrations/website-tag"
+  icon={
+    <svg
+      className="h-6 w-6"
+      width="800px"
+      height="800px"
+      viewBox="0 0 256 256"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      preserveAspectRatio="xMidYMid"
+    >
+      <g>
+        <polygon
+          fill="#8AB4F8"
+          points="150.261818 245.516364 105.825455 202.185455 201.258182 104.730909 247.265455 149.821818"
+        ></polygon>
+        <path
+          d="M150.450909,53.9381818 L106.174545,8.73090909 L9.36,104.629091 C-3.12,117.109091 -3.12,137.341818 9.36,149.836364 L104.72,245.821818 L149.810909,203.64 L77.1563636,127.232727 L150.450909,53.9381818 Z"
+          fill="#4285F4"
+        ></path>
+        <path
+          d="M246.625455,105.370909 L150.625455,9.37090909 C138.130909,-3.12363636 117.869091,-3.12363636 105.374545,9.37090909 C92.88,21.8654545 92.88,42.1272727 105.374545,54.6218182 L201.374545,150.621818 C213.869091,163.116364 234.130909,163.116364 246.625455,150.621818 C259.12,138.127273 259.12,117.865455 246.625455,105.370909 Z"
+          fill="#8AB4F8"
+        ></path>
+        <circle
+          fill="#246FDB"
+          cx="127.265455"
+          cy="224.730909"
+          r="31.2727273"
+        ></circle>
+      </g>
+    </svg>
+  }
+>
+  Install the Unify JavaScript tag in Google Tag Manager. Navigate to Settings >
+  Integrations > Website Tag get your tag, and make sure to enable [Support
+  document.write](https://www.notion.so/Integrate-Unify-to-your-website-9d085875792e4ef5ba69e6ef81e7e553?pvs=21).
+</Card>
+<Card
+  title="Segment"
+  href="/integrations/segment"
+  icon={
+    <svg
+      className="h-6 w-6"
+      xmlns="http://www.w3.org/2000/svg"
+      width="64"
+      height="64"
+      viewBox="0 0 64 64"
+    >
+      <g transform="matrix(.768307 0 0 .768307 0 2.304922)">
+        <path
+          d="M51.9 52.8H4c-2.2 0-4-1.8-4-4s1.8-4 4-4h47.9c2.2 0 4 1.8 4 4s-1.8 4-4 4z"
+          fill="#99cfac"
+        />
+        <path
+          d="M41.7 77.3c-3.9 0-7.8-.6-11.5-1.7-2.1-.7-3.3-2.9-2.6-5s2.9-3.3 5-2.6c2.9.9 6 1.4 9.1 1.4 13.6 0 25.4-8.7 29.3-21.7.6-2.1 2.9-3.3 5-2.7s3.3 2.9 2.7 5c-5.1 16.3-19.9 27.3-37 27.3z"
+          fill="#49b881"
+        />
+        <path
+          d="M79.3 32.5H31.4c-2.2 0-4-1.8-4-4s1.8-4 4-4h47.9c2.2 0 4 1.8 4 4s-1.8 4-4 4z"
+          fill="#99cfac"
+        />
+        <path
+          d="M8.5 32.5c-.4 0-.8-.1-1.2-.2-2.1-.6-3.3-2.9-2.7-5C9.7 11 24.5 0 41.7 0c3.9 0 7.8.6 11.5 1.7 2.1.7 3.3 2.9 2.6 5s-2.9 3.3-5 2.6c-2.9-.9-6-1.4-9.1-1.4-13.6 0-25.4 8.7-29.3 21.7-.6 1.8-2.2 2.9-3.9 2.9z"
+          fill="#49b881"
+        />
+        <g fill="#99cfac">
+          <circle r="4" cy="13.3" cx="65.4" />
+          <circle r="4" cy="64.1" cx="17.9" />
+        </g>
+      </g>
+    </svg>
+  }
+>
+  Follow instructions here to integrate your website via Segment
+</Card>
 
 Typically this integration is owned by engineering or marketing.
 
@@ -30,7 +109,7 @@ Turn on website intent data so that you start revealing the companies behind ano
 [See here](/intent) for our support doc on how to turn on intent data.
 
 <aside>
-⚡ If we don’t support a provider you want to use, let us know at hello@unifygtm.com.
+⚡ If we don't support a provider you want to use, let us know at hello@unifygtm.com.
 
 </aside>
 
@@ -47,7 +126,8 @@ Please follow the complete guide [here](/integrations/salesforce) to integrate y
 Typically this integration is owned by a sales leader or sales / revenue operations.
 
 <Note>
-⚡ Our Hubspot integration will be coming soon - if you’d like to be notified when this is released let us know at hello@unifygtm.com.
+  ⚡ Our Hubspot integration will be coming soon - if you'd like to be notified
+  when this is released let us know at hello@unifygtm.com.
 </Note>
 
 ## Step 4: Build your first audience

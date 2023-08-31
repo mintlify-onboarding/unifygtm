@@ -1,14 +1,16 @@
 ---
-title: "How to Run a Playbook"
+title: 'How to Run a Playbook'
 ---
 
 ## Context
 
 <Tip>
-    💡 Playbooks let you take action on an audience. They are built to prospect for new people in bulk, push data into Salesforce and soon to drop people directly into email sequences.
+  💡 Playbooks let you take action on an audience. They are built to prospect
+  for new people in bulk, push data into Salesforce and soon to drop people
+  directly into email sequences.
 </Tip>
 
-Before you run a playbook, you’ll need to have an audience ([see here for our guide](https://www.notion.so/How-to-create-an-audience-230cfa6fbc8945dfa28c18adb03276f6?pvs=21)).
+Before you run a playbook, you'll need to have an audience ([see here for our guide](https://www.notion.so/How-to-create-an-audience-230cfa6fbc8945dfa28c18adb03276f6?pvs=21)).
 
 Steps to create a playbook:
 
@@ -22,36 +24,36 @@ Steps to create a playbook:
 
 Navigate to the [Playbooks tab](https://app.unifygtm.com/dashboard/playbooks) and click `Create Playbook`
 
-![playbooks 1.png](/images/31.png)
+<Frame>![playbooks 1.png](/images/31.png)</Frame>
 
-Next you’ll select your run schedule:
+Next you'll select your run schedule:
 
 1. Continuous: The playbook will run every time a new company or person enters the audience. Set up your playbook once and let it run in the background forever.
 2. One Time: The playbook will run once on the companies and people in the audience.
 
-![Untitled](/images/32.png)
+<Frame>![Untitled](/images/32.png)</Frame>
 
 ## Select your audience
 
-Here you’ll select the audience that you want the playbook to run on
+Here you'll select the audience that you want the playbook to run on
 
-![Untitled](/images/33.png)
+<Frame>![Untitled](/images/33.png)</Frame>
 
 ## Enable prospect for new people
 
 Enabling prospect will return prospects (email, mobile phone number, job title, and other key details) at companies in the audience.
 
 1. Toggle prospect on or off:
-    1. When on, we will look for new prospects
-    2. When off, we will only act on existing records in Unify and your Salesforce instance
+   1. When on, we will look for new prospects
+   2. When off, we will only act on existing records in Unify and your Salesforce instance
 2. Max prospects: The max number of people we will find at a given company
-3. Personas: The types of prospects that you want us to find. We will prioritize prospects based on how you order personas 
+3. Personas: The types of prospects that you want us to find. We will prioritize prospects based on how you order personas
 
-![Prospect 2.png](/images/34.png)
+<Frame>![Prospect 2.png](/images/34.png)</Frame>
 
-If you haven’t built personas, you can `search by titles instead`. This will let you search for prospects whose job titles contain those titles.
+If you haven't built personas, you can `search by titles instead`. This will let you search for prospects whose job titles contain those titles.
 
-![Untitled](/images/35.png)
+<Frame>![Untitled](/images/35.png)</Frame>
 
 <Tip>
 ⚡ Tip: If you have many job titles in a Google Sheet or Excel Sheet, you can copy and paste them directly into Unify. [See here for a tutorial](https://www.loom.com/share/554849abffc748aa978df2a6338d7dcd).
@@ -63,15 +65,15 @@ If you haven’t built personas, you can `search by titles instead`. This will l
 Next choose how you want us to action on these companies and people:
 
 1. Today writing to Salesforce is the only action supported
-    1. We will write as leads or contacts and accounts depending on what you’ve chosen in your Salesforce write settings
+   1. We will write as leads or contacts and accounts depending on what you've chosen in your Salesforce write settings
 2. How this works
-    1. If records don’t exist in Salesforce for companies or people, we will create new ones
-        1. We will populate any default values on the record that you’ve denoted in Advanced settings or in [Salesforce settings](https://www.notion.so/How-to-Integrate-Salesforce-489d1e269d8c491d9509aeaee4c50803?pvs=21) 
-    2. If records already exist, we will only update the `Unify Tag` field and not overwrite any existing data
-3. Once you feel good about these settings, click Save & Launch and the playbook will start running 
+   1. If records don't exist in Salesforce for companies or people, we will create new ones
+      1. We will populate any default values on the record that you've denoted in Advanced settings or in [Salesforce settings](https://www.notion.so/How-to-Integrate-Salesforce-489d1e269d8c491d9509aeaee4c50803?pvs=21)
+   2. If records already exist, we will only update the `Unify Tag` field and not overwrite any existing data
+3. Once you feel good about these settings, click Save & Launch and the playbook will start running
 
-![Personas 4.png](/images/36.png)
+<Frame>![Personas 4.png](/images/36.png)</Frame>
 
 When creating new records you might want to populate fields in Salesforce with default values. An example that we commonly see is `Lead Source Detail` where a user will populate details about the campaign. You can access this under `Advanced settings` at both the company and person level.
 
-![playbook 5.png](/images/37.png)
+<Frame>![playbook 5.png](/images/37.png)</Frame>
