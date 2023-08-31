@@ -1,0 +1,83 @@
+---
+title: "How to Integrate Salesforce"
+description: "This doc outlines how to integrate Unify with your Salesforce instance. Unify is what is considered a `Connected App` on the Salesforce platform."
+---
+
+## How to integrate Salesforce
+
+1. Pick integration user strategy
+2. Create `Unify Tag` field on Lead, Contact and Account objects
+3. Link Salesforce via Unify Settings Page
+4. Create field mapping between Salesforce and Unify objects
+5. Enable writing records to Salesforce, and choose Lead or Contact/Account data model
+
+## Additional Salesforce resources
+
+1. [How to bulk update Salesforce records](https://www.notion.so/Bulk-Update-Salesforce-Records-e689c30b0c1049a9835c8589ca446395?pvs=21)
+2. [How to toggle lead assignment rules in Salesforce](https://www.notion.so/Toggle-Lead-Assignment-Rule-in-Salesforce-617ba1cc494943bc85f70b112cc07d99?pvs=21)
+
+## 1. Integration user strategy
+
+`We recommend creating a dedicated, Unify-only Integration User` with a specific permission set. This enables more robust reporting because it ensures all record changes by Unify are properly attributed to Unify. With that being said, any of the approaches below work well.
+
+| Setup | Pros | Cons |
+| --- | --- | --- |
+| Dedicated, Unify-only Integration User  | This is best practice and our recommended option. The user is granted precise permissions and all updates made within Salesforce are clearly attributable to Unify. | This requires the purchase or use of a dedicated Salesforce User license, which may require time to set up at your company. |
+| Shared Integration User with other connected apps | This might be a better choice, because you may already use an Integration User with other connected apps. You don’t need to provision a new user. | Unify must share the permissions and limits of the Shared Integration User. If this user’s access is shut down, all connected apps will be impacted.  |
+| Existing Individual User with system admin permissions | This is typically the fastest and most affordable option because you use an Individual User that already exists in your Salesforce. There’s no need to create anything new. | Unify is given full system access and edits made within Salesforce are be attributed to the Individual User. If the user leaves the company, the connection will break. |
+
+## 2. Create Unify Tag on Lead, Contact and Account Data Models
+
+Create a new text field (255 characters) on the Lead, Contact and Account data models. `Unify Tag` fields enable you to track the actions that Unify is taking in your Salesforce instance in easy to create reports
+
+![Untitled](/images/18.png)
+
+![Untitled](/images/19.png)
+
+![Untitled](/images/20.png)
+
+![Untitled](/images/21.png)
+
+## 3. Link Salesforce via Unify Settings Page
+
+![Untitled](//images/22.png)
+
+Once Salesforce is successfully synced, click `Resume` and the read only sync will begin:
+
+![Before you’ve hit Resume](/images/23.png)
+
+Before you’ve hit Resume
+
+![After hitting resume](/images/24.png)
+
+After hitting resume
+
+## 4. Create field mapping between Salesforce and Unify objects
+
+For companies and people, click `Create Mapping` and confirm how you want your Salesforce fields to map to Unify standard fields. We pre-populate as many of these mappings as we can.
+
+![Untitled](/images/25.png)
+
+Once your field mappings are set, press confirm.
+
+![Untitled](/images/26.png)
+
+If mappings are successfully set, you should see the button change to `Update Mapping`.
+
+![Untitled](/images/27.png)
+
+### Default Values
+
+Unify lets you set default values for records that we create (eg `Lead Source` = Unify). When we create new records, we will automatically populate the fields you choose with default values. You can set default values for Leads, Contacts or Accounts in the upper right hand corner of the field mapping pages.
+
+![Untitled](/images/28.png)
+
+![Untitled](/images/29.png)
+
+## 5. Enable writing records to Salesforce, and choose Lead or Contact/Account data model
+
+![Untitled](/images/30.png)
+
+We recommend writing records in the `same data structure (Leads or Contacts/Accounts) that your BDR/SDRs use`. This will ensure that Unify-created records are tracked and reported on in a way consistently with how you currently use Salesforce.
+
+The best practice is to create Contacts and Accounts for Salesforce data hygiene.

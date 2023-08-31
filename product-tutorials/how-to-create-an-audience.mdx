@@ -1,0 +1,123 @@
+---
+title: "How to Create an Audience"
+description: "Audiences in Unify are lists of companies and/or people, similar to a Salesforce report. Use them to build lists based on Salesforce data, website intent data, and more."
+---
+
+Typically sales leaders or revenue or sales operations will create audiences for sellers and to build playbooks on. You can access audiences [here](https://app.unifygtm.com/dashboard/audiences) in your Unify app.
+
+## Example audiences
+
+These are some example audiences that you might build:
+
+1. Your owned accounts that have recent website activity
+2. Companies visiting high intent pages (e.g., pricing or book a demo), but haven’t booked a demo or signed up
+3. Companies that come to the website immediately after receiving a sales activity (email or call)
+4. Companies that return to the website 30+ days after sales activity (there’s potential to re-engage)
+5. Companies with a closed lost opportunity that have returned to the website (there’s potential to re-engage)
+
+Here’s an example audience of companies that visited our website in the past 7 days:
+
+![Untitled](/images/1.png)
+
+Here’s what an audience looks like when you’re building it:
+
+![audience 5!!.png](/images/2.png)
+
+## Creating an audience
+
+Navigate to the [Audiences tab](https://app.unifygtm.com/dashboard/audiences) in Unify. You have 2 options to create an audience:
+
+1. Create with audience builder - use this approach when the data that you want to build on is in Salesforce, the website, or another source that Unify integrates with
+2. Upload a CSV - use this approach when you’re using a static list (e.g., you’re going to a conference and have a list of target accounts)
+
+## Create an audience with audience builder
+
+Click `+ New audience` in the top right of the screen
+
+![New Audience.png](/images/3.png)
+
+Select `Create new` or `Duplicate and edit from an existing audience`
+
+![Untitled](/images/4.png)
+
+Name your audience and start filtering for companies or people. Under the hood, audiences functions a lot like a SQL query, allowing you to join together different datasets.
+
+- When you filter on companies, people (contacts or leads) associated with those companies will automatically be included or excluded from the audience
+
+![Create audience screen.png](/images/5.png)
+
+Here’s an example audience that we’ve built, filtering to companies that visited our website in the past 7 days and are not accounts in Salesforce. In the preview, you’ll see that only 1 company is included in this audience.
+
+![Building the audience.png](/images/6.png)
+
+Once you have the desired filters set and you’ve named your audience, click `Create audience` and you’re done!
+
+![audience 5!!.png](/images/7.png)
+
+## Condition Groups
+
+Condition groups are designed to nest AND and OR statements however you see fit. Use them to build more complex audiences.
+
+![Group by entry point.png](/images/8.png)
+
+Example condition group
+
+![Audiences group by.png](/images/9.png)
+
+## Create an audience from a CSV
+
+You may want to create an audience from a CSV for something like attending a conference. Navigate to the [Audiences tab](https://app.unifygtm.com/dashboard/audiences) in Unify and click `Upload CSV` to begin.
+
+![csv 1.png](/images/10.png)
+
+Name your audience and upload your CSV (we require company names and websites)
+
+![csv 2.png](/images/11.png)
+
+You’ll see this message when your CSV has been successfully uploaded
+
+![csv 3.png](/images/12.png)
+
+Map the columns of the CSV to Unify fields and click `Finish` when you’re ready 
+
+![csv 4.png](/images/13.png)
+
+Success, your new audience has been created.
+
+![csv 5.png](/images/14.png)
+
+## Advanced audiences
+
+Here’s the full list of what you can filter by when building audiences:
+
+### Companies
+
+1. Firmographics and CRM
+    1. Unify Company fields: example fields include Industry, Employee Count, Revenue and more
+    2. Salesforce Lead fields
+    3. Salesforce Account fields
+    4. Clearbit fields: available if you’ve integrated Clearbit Reveal
+2. Website activity
+    1. Page views: filter based on all page views, page views matching a certain URL or page views containing a certain URL
+    2. Sessions: filter based on session counts, or sessions with page views matching or containing specific URLs
+    3. Visitors: filter to companies with a specific number of visitors, or visitors to specific pages
+3. Exists / doesn’t exist in
+    1. Filter to companies that exist or don’t exist in Salesforce as an account or a lead
+
+### People
+
+1. Demographics and CRM
+    1. Unify Person fields: example fields include Title, Stage, Lead Source and more
+    2. Salesforce Contact fields
+    3. Salesforce Lead fields
+2. Exists / doesn’t exist in
+    1. Filter to people that exist or don’t exist in Salesforce as a contact or a lead
+
+Sample screenshots of navigating into Firmographics and CRM > Salesforce Account fields
+
+![csv 5.png](/images/15.png)
+
+![csv 5.png](/images/16.png)
+
+![csv 5.png](/images/17.png)
+

@@ -42,8 +42,15 @@
     {
       "group": "Get Started",
       "pages": [
-        "getting-started/overview", 
-        "getting-started/onboarding-guide"
+        "getting-started/onboarding-guide",
+        "getting-started/how-to-integrate-salesforce"
+      ]
+    },
+    {
+      "group": "Product Tutorial",
+      "pages": [
+        "product-tutorials/how-to-run-a-playbook",
+        "product-tutorials/how-to-create-an-audience"
       ]
     }
   ],
