@@ -1,0 +1,91 @@
+---
+title: "Segment Integration Guide"
+sidebarTitle: "Segment"
+description: "If you use Segment to collect website analytics, Unify can connect to your Segment workspace as a destination and reveal web traffic data. This will also let you build audience and playbook filters using Segment analytics data."
+---
+
+# Steps
+
+<Note>
+    If you’re also using the Unify Tag, make sure that it isn’t running on the same websites as Segment or else events may be double counted.
+</Note>
+
+## Generate a Key in Unify
+
+1. Log in to the Unify app
+2. Navigate to the [Segment settings page](https://app.unifygtm.com/dashboard/settings/integrations/segment) and click **Setup**
+    
+    <Frame>![Setup.png](/images/53.png)</Frame>
+    
+3. Click the **Copy** button to copy the write key to your clipboard
+    
+    <Frame>![Write Key.png](/images/54.png)</Frame>
+    
+
+## Add Segment Destination
+
+1. Log in to Segment and click on the **Destinations** tab in the sidebar
+    
+    <Frame>![Screenshot 2023-08-23 at 8.02.29 PM.png](/images/55.png)</Frame>
+    
+2. Click **Add destination** in the top right corner
+    
+    <Frame>![Screenshot 2023-08-23 at 7.02.47 PM.png](/images/56.png)</Frame>
+    
+3. Search for “webhook” and select the **Webhook (actions)** destination
+    
+    <Frame>![Screenshot 2023-08-23 at 7.03.49 PM.png](/images/57.png)</Frame>
+    
+4. Click **Add destination** again in the top right corner
+    
+    <Frame>![Screenshot 2023-08-23 at 7.05.58 PM.png](/images/58.png)</Frame>
+    
+5. Select website source whose data you want to send to Unify and then click **Next**
+    
+    <Frame>![Screenshot 2023-08-23 at 7.08.02 PM.png](/images/59.png)</Frame>
+    
+6. Give this destination a name, make sure **Fill in settings manually** is selected, and click **Create destination**
+    
+    <Frame>![Screenshot 2023-08-23 at 7.13.50 PM.png](/images/60.png)</Frame>
+    
+7. Click on the **Mappings** tab on the top and then select **New Mapping**
+    
+    <Frame>![Screenshot 2023-08-23 at 7.18.04 PM.png](/images/61.png)</Frame>
+    
+8. Choose the **Send** option
+    
+    <Frame>![Screenshot 2023-08-23 at 7.21.39 PM.png](/images/62.png)</Frame>
+    
+9. Fill in the following mapping values…
+    1. Under **Section 1**:
+        1. Unify currently supports Page, Track, and Identify event types. You should select **any** and then list all of these types.
+        2. If there are specific event types that you know you do not want to forward to Unify, you can safely omit them.
+        
+        <Frame>![Screenshot 2023-08-23 at 7.24.38 PM.png](/images/63.png)</Frame>
+        
+    2. Under **Section 2**:
+        1. Click **Load Sample Event** to populate the box with an example Segment event
+        
+        <Frame>![Screenshot 2023-08-23 at 7.29.31 PM.png](/images/64.png)</Frame>
+        
+    3. Under **Section 3**:
+        1. Next to **URL**, fill in the following value:
+            
+            ```
+            https://analytics.unifygtm.com/api/v1/webhooks/segment
+            ```
+            
+        2. List two values under **Headers** (click **Add Mapping Field** to add more boxes):
+            1. `<YOUR WRITE KEY` → `X-Write-Key`
+            2. `application-json` → `Content-Type`
+        3. Be sure to replace `<YOUR WRITE KEY>` with the key you copied earlier
+        
+        <Frame>![Screenshot 2023-08-23 at 7.42.22 PM.png](/images/65.png)</Frame>
+        
+    4. Under **Section 4**:
+        1. Send a test event to verify that it’s working
+        
+        <Frame>![Screenshot 2023-08-23 at 7.44.09 PM.png](/images/66.png)</Frame>
+        
+
+That’s it! If you see **Test succeeded**, you’re all set. Traffic should now be flowing into Unify.

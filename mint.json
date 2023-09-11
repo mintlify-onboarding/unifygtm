@@ -1,21 +1,17 @@
 {
   "name": "Unify",
   "logo": {
-    "light": "/logo.svg",
-    "dark": "/logo.svg"
+    "light": "/logo/light.png",
+    "dark": "/logo/dark.svg"
   },
   "favicon": "/favicon.png",
   "colors": {
-    "primary": "#272728",
-    "light": "#EBECED",
-    "dark": "#0E0E0E",
-    "background": {
-      "dark": "#0C0D0D"
-    }
+    "primary": "#0E0E0E",
+    "light": "#FAFAFA",
+    "dark": "#0E0E0E"
   },
   "modeToggle": {
-    "default": "dark",
-    "isHidden": true
+    "default": "dark"
   },
   "topbarCtaButton": {
     "name": "Log in",
@@ -29,10 +25,6 @@
   ],
   "tabs": [
     {
-      "name": "About Unify",
-      "url": "https://www.unifygtm.com/about"
-    },
-    {
         "name": "Privacy",
         "url": "https://www.unifygtm.com/legal/privacy-policy"
     }
@@ -42,14 +34,30 @@
       "group": "Get Started",
       "pages": [
         "getting-started/onboarding-guide",
-        "getting-started/how-to-integrate-salesforce"
+        "getting-started/unify-101-for-sellers",
+        "getting-started/unify-101-for-sales"
       ]
     },
     {
-      "group": "Product Tutorial",
+      "group": "Product Guides",
       "pages": [
+        "product-tutorials/user-roles-and-permissions",
+        "product-tutorials/how-to-create-an-audience",
         "product-tutorials/how-to-run-a-playbook",
-        "product-tutorials/how-to-create-an-audience"
+        "product-tutorials/how-to-use-personas",
+        "product-tutorials/integrate-unify-to-your-website",
+        "product-tutorials/turn-on-website-intent-data",
+        "product-tutorials/how-to-create-an-exclusion"
+      ]
+    },
+    {
+      "group": "Integrations",
+      "pages": [
+        "integrations/how-to-integrate-salesforce",
+        "integrations/segment",
+        "integrations/google-tag-manager",
+        "integrations/6sense",
+        "integrations/clearbit"
       ]
     }
   ],
