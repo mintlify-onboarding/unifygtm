@@ -6,27 +6,21 @@
   },
   "favicon": "/favicon.png",
   "colors": {
-    "primary": "#0E0E0E",
+    "primary": "#111827",
     "light": "#FAFAFA",
-    "dark": "#0E0E0E"
+    "dark": "#111827"
   },
   "modeToggle": {
     "default": "dark"
   },
   "topbarCtaButton": {
-    "name": "Log in",
-    "url": "https://app.unifygtm.com/"
+    "name": "Support",
+    "url": "mailto:support@unifygtm.com"
   },
   "topbarLinks": [
     {
       "name": "Join the waitlist",
       "url": "https://www.unifygtm.com/about#"
-    }
-  ],
-  "tabs": [
-    {
-        "name": "Privacy",
-        "url": "https://www.unifygtm.com/legal/privacy-policy"
     }
   ],
   "navigation": [
